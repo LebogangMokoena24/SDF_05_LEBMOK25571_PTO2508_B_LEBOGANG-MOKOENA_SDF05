@@ -1,79 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SDF05 Footer Fix</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* keep accent colors in one place */
+    :root { --footer-bg: #659f8f; --accent: #d86943; }
+  </style>
+</head>
+<body class="bg-white">
 
-  <footer class="bg-[#659f8f] text-black">
-  <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-3 gap-8">
-    <!-- Newsletter Section -->
-    <div>
-      <h2 class="text-lg font-semibold mb-4">Subscribe to our newsletter for updates.</h2>
-      <form class="flex space-x-2">
-        <input type="email" placeholder="Email Address" class="px-3 py-2 rounded-md flex-1">
-        <button class="bg-[#d86943] text-white px-4 py-2 rounded-md">Subscribe</button>
-      </form>
-    </div>
+  <main class="min-h-[60vh]"></main>
 
-    <!-- Quick Links -->
-    <div>
-      <p class="font-semibold mb-4">Quick Link</p>
-      <ul class="space-y-2">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Who We Are</a></li>
-        <li><a href="#">Our Philosophy</a></li>
-      </ul>
-    </div>
-
-    <!-- Technologies -->
-    <div>
-      <p class="font-semibold mb-4">Technologies</p>
-      <ul class="space-y-2">
-        <li><a href="#">HTML</a></li>
-        <li><a href="#">CSS</a></li>
-        <li><a href="#">JavaScript</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <hr class="my-6 border-[#d86943]">
-
-  <div class="max-w-6xl mx-auto px-6">
-    <img src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" alt="Codespace Logo" class="h-8">
-  </div>
-</footer>
-
+  <!-- SINGLE CORRECT FOOTER -->
+  <footer class="bg-[color:var(--footer-bg)] text-black">
+    <div class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Newsletter Section -->
       <div>
-        <h2>Subscribe to our newsletter for updates.</h2>
-        <form>
-          <input type="email" placeholder="Email Address">
-          <button>Subscribe</button>
+        <h2 class="text-lg font-semibold mb-4">Subscribe to our newsletter for updates.</h2>
+        <form class="flex flex-col sm:flex-row sm:items-center gap-3" action="#" method="post" aria-label="Subscribe to newsletter">
+          <label for="email" class="sr-only">Email</label>
+          <input id="email" name="email" type="email" required placeholder="Email Address"
+                 class="flex-1 px-3 py-2 rounded-md border border-transparent text-black focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-white" />
+          <button type="submit" class="w-full sm:w-auto px-4 py-2 rounded-md font-medium text-white bg-[color:var(--accent)] hover:bg-[#c85a33]">
+            Subscribe
+          </button>
         </form>
       </div>
 
       <!-- Quick Links -->
       <div>
-        <p>Quick Link</p>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Who We Are</a></li>
-          <li><a href="#">Our Philosophy</a></li>
+        <p class="font-semibold mb-4">Quick Link</p>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">Home</a></li>
+          <li><a href="#" class="hover:underline">Who We Are</a></li>
+          <li><a href="#" class="hover:underline">Our Philosophy</a></li>
         </ul>
       </div>
 
       <!-- Technologies -->
       <div>
-        <p>Technologies</p>
-        <ul>
-          <li><a href="#">HTML</a></li>
-          <li><a href="#">CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
+        <p class="font-semibold mb-4">Technologies</p>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:underline">HTML</a></li>
+          <li><a href="#" class="hover:underline">CSS</a></li>
+          <li><a href="#" class="hover:underline">JavaScript</a></li>
         </ul>
       </div>
     </div>
 
-    <hr>
+    <hr class="my-6 border-[color:var(--accent)]">
 
-    <div>
-      <img src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" alt="Codespace Logo">
+    <div class="max-w-6xl mx-auto px-6 pb-8">
+      <!-- single logo (remove this <img> if you don't want a logo) -->
+      <img src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" alt="Codespace Logo" class="h-8">
     </div>
   </footer>
 
 </body>
 </html>
+
