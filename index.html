@@ -7,22 +7,33 @@
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* keep accent colors in one place */
-    :root { --footer-bg: #659f8f; --accent: #d86943; }
+    :root { 
+      --footer-bg: #659f8f; 
+      --accent: #d86943; 
+    }
   </style>
 </head>
-<body class="bg-[#659f8f]">
+<body class="bg-[color:var(--footer-bg)]">
   <!-- SINGLE CORRECT FOOTER -->
   <footer class="bg-[color:var(--footer-bg)] text-black">
     <div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      
       <!-- Newsletter Section -->
       <div>
         <h2 class="text-lg font-semibold mb-4">Subscribe to our newsletter for updates.</h2>
-        <form class="flex flex-col sm:flex-row sm:items-center gap-3 w-full max-w-md mx-auto" action="#" method="post" aria-label="Subscribe to newsletter">
-          <label for="email" class="sr-only">Email</label>
-          <input id="email" name="email" type="email" required placeholder="Email Address"
-                 class="flex-1 px-3 py-2 rounded-md border border-transparent text-black focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-white" />
-          <button type="submit" class="w-full sm:w-auto px-4 py-2 rounded-md font-medium text-white bg-[color:var(--accent)] hover:bg-[#c85a33]">
+        <form class="flex flex-col sm:flex-row sm:items-center gap-3 w-full max-w-md mx-auto" action="#" method="post">
+          <input 
+            id="email" 
+            name="email" 
+            type="email" 
+            required 
+            placeholder="Email Address"
+            class="flex-1 px-3 py-2 rounded-md border border-transparent text-black focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-white" 
+          />
+          <button 
+            type="submit" 
+            class="w-full sm:w-auto px-4 py-2 rounded-md font-medium text-white bg-[color:var(--accent)] hover:bg-[#c85a33]"
+          >
             Subscribe
           </button>
         </form>
@@ -52,11 +63,14 @@
     <hr class="my-6 border-[color:var(--accent)]">
 
     <div class="max-w-6xl mx-auto px-6 pb-8">
-      <!-- single logo (remove this <img> if you don't want a logo) -->
-      <img src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" alt="Codespace Logo" class="h-8">
+      <img 
+        src="https://codespace-assets.global.ssl.fastly.net/wp/assets/website/codespace-primary-logo-light.svg" 
+        alt="Codespace Logo" 
+        class="h-8 mx-auto md:mx-0"
+      >
     </div>
   </footer>
-
 </body>
 </html>
+
 
